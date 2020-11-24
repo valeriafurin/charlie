@@ -1,4 +1,4 @@
-<% simple_form_for @message do |f| %>
-  <%= f.input :message %>
+<%= simple_form_for current_user.message do |f| %>
+  <%= f.input :message, placeholder: "Current: #{current_user.message}" %>
   <%= f.button :submit %>
 <% end %>
