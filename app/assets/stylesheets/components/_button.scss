@@ -1,0 +1,29 @@
+.button {
+    position: absolute;
+    width: 266.93px;
+    height: 57.58px;
+    left: calc(50% - 266.93px/2 - 1.03px);
+    top: 484.94px;
+
+    background: #F2CC8F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 58px;
+    transform: matrix(1, 0.01, -0.02, 1, 0, 0);
+}
+
+.btn-text {
+    position: absolute;
+    width: 140px;
+    height: 30px;
+    left: 107px;
+    top: 500px;
+
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #505155;
+}
