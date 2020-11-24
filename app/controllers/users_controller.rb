@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
   def message
-    current_user.message = params["message"]
+    current_user.message = params[current_user.message]["message"]
     current_user.save
+    redirect_to settings_path
   end
 
   def contacts

@@ -11,12 +11,26 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        <h1>Contacts</h1>
-          <ul>
-            <% @contacts.each do |contact| %>
-            <li> <%= contact.name %> </li>
-            <% end %>
-          </ul>
+
+            <div class="accordion" id="accordion2">
+              <% @contacts.each do |contact| %>
+                <div class="card">
+                  <div class="card-header" id="heading<%= contact.id %>">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<%= contact.id %>" aria-expanded="true" aria-controls="collapse<%= contact.id %>">
+                        <%= contact.name %>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapse<%= contact.id %>> " class="collapse show" aria-labelledby="heading<%= contact.id %>" data-parent="#accordion2">
+                    <div class="card-body">
+                      <%#= render '/shared/contact_edit' %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+ 
       </div>
     </div>
   </div>
@@ -30,7 +44,7 @@
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        <%= render '/shared/message' %>
+        <%= render 'shared/message' %>
       </div>
     </div>
   </div>
