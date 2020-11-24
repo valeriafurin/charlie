@@ -2,3 +2,30 @@
 h1 {
     color: $font-color-h1;
 }
+
+.animation { position:absolute;
+        top : 100px;
+        background-color:white;
+        left: 100px;
+        height:60px;
+        width:60px;
+        border-radius: 100px;
+        -webkit-transition-property: -webkit-transform;
+        -webkit-transition-duration: 7s;
+        -moz-transition-property: -moz-transform background-color;
+        -moz-transition-duration: 7s;
+        -webkit-animation-name: grow;
+        -webkit-animation-duration: 11s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: grow;
+        -moz-animation-duration: 11s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes grow {
+    0% { transform: scale(1); }
+    50% { transform: scale(3.5); background-color: lightgrey; }
+    100% { transform: scale(1); }
+}
