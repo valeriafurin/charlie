@@ -1,5 +1,5 @@
-<%= simple_form_for contact do |f| %>
+<%= simple_form_for Contact.first do |f| %>
   <%= f.input :name %>
   <%= f.input :phone_number %>
-  <%= f.button :done %>
+  <%= f.button :submit %>
 <% end %>
