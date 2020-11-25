@@ -15,7 +15,6 @@ class PagesController < ApplicationController
 
   def settings
     @contacts = Contact.where(user_id: current_user.id)
-    @message = current_user.message
   end
 
   def toggle_voice
