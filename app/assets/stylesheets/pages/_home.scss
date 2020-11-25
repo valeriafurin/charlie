@@ -1,14 +1,22 @@
 // Specific CSS for your home-page
+body {
+  background-image: linear-gradient(0deg, #f5dbdc 49%, #acaee1 100%);
+}
 h1 {
+  font-family: $h1-font;
     color: $font-color-h1;
 }
 
 .animation { position:absolute;
-        top : 100px;
-        background-color:white;
-        left: 100px;
-        height:60px;
-        width:60px;
+        top : 200px;
+        background: rgb(255,99,86);
+background: -moz-linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 88%);
+background: -webkit-linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 88%);
+background: linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 88%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff6356",endColorstr="#ffb38b",GradientType=1);
+        left: 137.5px;
+        height:80px;
+        width:80px;
         border-radius: 100px;
         -webkit-transition-property: -webkit-transform;
         -webkit-transition-duration: 7s;
@@ -22,10 +30,11 @@ h1 {
         -moz-animation-duration: 11s;
         -moz-animation-iteration-count: infinite;
         -moz-animation-timing-function: linear;
+        z-index: 1;
 }
 
 @-webkit-keyframes grow {
     0% { transform: scale(1); }
-    50% { transform: scale(3.5); background-color: lightgrey; }
+    50% { transform: scale(3.5); }
     100% { transform: scale(1); }
 }
