@@ -3,4 +3,12 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def settings
+    @contacts = Contact.where(user_id: current_user.id)
+    @message = current_user.message
+    @user = User.new
+  end
+
+
 end

@@ -1,0 +1,68 @@
+<h1>SETTINGS</h1>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Contacts
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+
+            <div class="accordion" id="accordion2">
+              <% @contacts.each do |contact| %>
+                <div class="card">
+                  <div class="card-header" id="heading<%= contact.id %>">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<%= contact.id %>" aria-expanded="true" aria-controls="collapse<%= contact.id %>">
+                        <%= contact.name %>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapse<%= contact.id %>> " class="collapse show" aria-labelledby="heading<%= contact.id %>" data-parent="#accordion2">
+                    <div class="card-body">
+                      <%#= render '/shared/contact_edit' %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+ 
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Message
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <%= render 'shared/message' %>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+<%# make a button that links to rendering the contacts form  %>
+<%# find a solution for deleting a contact  %>
+
+
+  <div>
+    <%#= link_to "Toggle Voice", toggle_path %>
+  </div>
+</div>
+  <%#= render 'contacts' from '/shared/contacts' %>
+<%# make a button that links to rendering the message form  %>
+<%#= link_to 'Message', message_path %>
+  <%#= render 'message' from '/shared/message' %>
+<%# make a button that links to rendering the toggle view and triggers the toggle action  %>
+<%#= linkt_to 'Toggle Voice', toggle_voice_path %>
+
