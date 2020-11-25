@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_092106) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "message"
+    t.text "message", default: "I'm having a panic attack. Please call me."
     t.string "phone_number"
     t.boolean "voice"
     t.index ["email"], name: "index_users_on_email", unique: true
