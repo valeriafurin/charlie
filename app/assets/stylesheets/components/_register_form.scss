@@ -3,3 +3,49 @@
 
     background-color: #FFF6F0
 }
+.content-container {
+    padding-top: 30px;
+}
+
+.charlies-input {
+    border: none;
+    border-bottom: 1px solid #FE786C;
+    padding: 21px 12px;
+    border-radius: 6px 6px 0 0;
+}
+
+.sign-up {
+    margin: 20px;
+    text-align: center;
+    color: #FE786C;
+}
+.btn {
+    position: absolute;
+    width: 298px;
+    height: 75px;
+    left: 31px;
+    top: 421px;
+
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
+    border-radius: 40px;
+}
+
+
+.charlies-btn {
+    position: absolute;
+    width: 242.23px;
+    height: auto;
+    left: 58.88px;
+    top: 443px;
+
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FE786C;
+}
