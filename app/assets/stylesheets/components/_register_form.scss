@@ -4,7 +4,7 @@
     background-color: #FFF6F0
 }
 .content-container {
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 .charlies-input {
@@ -16,19 +16,20 @@
 
 .sign-up {
     margin: 20px;
+    margin-bottom: 30px;
     text-align: center;
     color: #FE786C;
 }
-.btn {
-    position: absolute;
-    width: 298px;
-    height: 75px;
-    left: 31px;
-    top: 421px;
+// .btn {
+//     position: absolute;
+//     width: 298px;
+//     height: 75px;
+//     left: 31px;
+//     top: 421px;
 
-    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
-    border-radius: 40px;
-}
+//     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
+//     border-radius: 40px;
+// }
 
 
 .charlies-btn {
@@ -37,6 +38,8 @@
     height: auto;
     left: 58.88px;
     top: 443px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
+    border-radius: 40px;
 
     font-family: Comfortaa;
     font-style: normal;
@@ -47,5 +50,17 @@
 
     text-align: center;
 
+    color: #FE786C;
+
+    //     width: 298px;
+    //     height: 75px;
+    //     left: 31px;
+    //     top: 421px;
+    
+    //     
+}
+
+.login-link {
+    text-decoration: none;
     color: #FE786C;
 }
