@@ -1,40 +1,62 @@
-// Specific CSS for your home-page
-body {
-  background-image: linear-gradient(0deg, #f5dbdc 49%, #acaee1 100%);
-}
-h1 {
-  font-family: $h1-font;
-    color: $font-color-h1;
-}
-
-.animation { position:absolute;
-        top : 200px;
-        background: rgb(255,99,86);
-background: -moz-linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 88%);
-background: -webkit-linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 88%);
-background: linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 88%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff6356",endColorstr="#ffb38b",GradientType=1);
-        left: 137.5px;
-        height:80px;
-        width:80px;
-        border-radius: 100px;
-        -webkit-transition-property: -webkit-transform;
-        -webkit-transition-duration: 7s;
-        -moz-transition-property: -moz-transform background-color;
-        -moz-transition-duration: 7s;
-        -webkit-animation-name: grow;
-        -webkit-animation-duration: 11s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-name: grow;
-        -moz-animation-duration: 11s;
-        -moz-animation-iteration-count: infinite;
-        -moz-animation-timing-function: linear;
-        z-index: 1;
+.page-container {
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(171.08deg, #ACAEE1 6.78%, #F5DBDC 45.25%);
+  overflow: hidden;
 }
 
+.mobile-title {
+  margin: 0;
+  color: white;
+}
+
+.animation {
+  position: relative;
+  display: flex;
+  margin: 160px auto 0;
+  background: rgb(255,99,86);
+  background: linear-gradient(319deg, rgba(255,99,86,1) 57%, rgba(255,179,139,1) 80%);
+  height:80px;
+  width:80px;
+  border-radius: 100%;
+  animation: transform 11s infinite;
+  animation-name: grow;
+  transform-origin: center;
+  z-index: 1;
+}
 @-webkit-keyframes grow {
     0% { transform: scale(1); }
-    50% { transform: scale(3.5); }
+    50% { transform: scale(2.5); }
     100% { transform: scale(1); }
+}
+
+.fog-1 {
+  position: absolute;
+  width: 400%;
+  top: 150px;
+  left: 0;
+  opacity:0.7;
+  z-index: 2;
+  animation: transform 70s infinite;
+  animation-name: move;
+}
+
+.fog-2 {
+  position: absolute;
+  width: 400%;
+  top: -20px;
+  left: 0;
+  opacity: 0.5;
+  z-index: 0;
+  animation: transform 70s infinite;
+  animation-name: move;
+}
+
+@-webkit-keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-70%); }
+    100% { transform: translateX(0); }
 }
