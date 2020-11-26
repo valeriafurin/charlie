@@ -1,32 +1,31 @@
 <h1>SETTINGS</h1>
-<div class="container">
+<div class="container settings">
   <div class="accordion" id="accordionMain">
     <div class="card">
       <div class="card-header" id="headingOne">
         <h5 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
             Contacts
           </button>
         </h5>
       </div>
-
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMain">
         <div class="card-body">
-                      <div class="accordion" id="accordion2">
+            <div class="accordion" id="accordion2">
               <% @contacts.each do |contact| %>
                 <div class="card">
                   <div class="card-header" id="heading<%= contact.id %>">
                     <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<%= contact.id %>" aria-expanded="false" aria-controls="collapse<%= contact.id %>">
-                        <%= contact.name %>
+                      <button class="btn" type="button" data-toggle="collapse" data-target="#collapse<%= contact.id %>" aria-expanded="false" aria-controls="collapse<%= contact.id %>">
+                        <%= contact.name == "" ? "Empty" : contact.name %>
                       </button>
                     </h5>
                   </div>
                   <div id="collapse<%= contact.id %>" class="collapse" aria-labelledby="heading<%= contact.id %>" data-parent="#accordion2">
                     <div class="card-body">
                       <%= simple_form_for contact do |f| %>
-                        <%= f.input :name %>
-                        <%= f.input :phone_number %>
+                        <%= f.input :name, placeholder: "Enter a name" %>
+                        <%= f.input :phone_number, placeholder: "Enter a phone number" %>
                         <%= f.button :submit %>
                       <% end %>
                     </div>
@@ -40,7 +39,7 @@
     <div class="card">
       <div class="card-header" id="headingTwo">
         <h5 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Message
           </button>
         </h5>
@@ -51,21 +50,8 @@
         </div>
       </div>
     </div>
-  </div>
-    <div class="card card-header">
-      <h5><%= link_to "Toggle Voice", toggle_path, method: :post %></h5>
+    <div class="card card-header" id="toggleswitch<%= current_user.voice %>">
+      <button class="btn" id="toggle<%= current_user.voice %>"><%= link_to "Toggle Voice", toggle_path, method: :post %></button>
     </div>
+  </div>
 </div>
-<%# make a button that links to rendering the contacts form  %>
-<%# find a solution for deleting a contact  %>
-
-
-
-
-  
-<%# make a button that links to rendering the message form  %>
-<%#= link_to 'Message', message_path %>
-  <%#= render 'message' from '/shared/message' %>
-<%# make a button that links to rendering the toggle view and triggers the toggle action  %>
-<%#= linkt_to 'Toggle Voice', toggle_voice_path %>
-
