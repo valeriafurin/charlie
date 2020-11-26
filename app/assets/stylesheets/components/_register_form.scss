@@ -20,23 +20,12 @@
     text-align: center;
     color: #FE786C;
 }
-// .btn {
-//     position: absolute;
-//     width: 298px;
-//     height: 75px;
-//     left: 31px;
-//     top: 421px;
-
-//     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
-//     border-radius: 40px;
-// }
-
 
 .charlies-btn {
     position: absolute;
-    width: 242.23px;
+    width: fit-content;
     height: auto;
-    left: 58.88px;
+    left: 100px;
     top: 443px;
     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
     border-radius: 40px;
@@ -46,21 +35,16 @@
     font-weight: normal;
     font-size: 32px;
     line-height: 36px;
-    /* identical to box height */
 
     text-align: center;
 
     color: #FE786C;
 
-    //     width: 298px;
-    //     height: 75px;
-    //     left: 31px;
-    //     top: 421px;
-    
-    //     
+    box-shadow: 0px 4px 19px 6px rgba(254, 120, 108, 0.23);
 }
 
 .login-link {
     text-decoration: none;
     color: #FE786C;
+    font-size: 15px;
 }
