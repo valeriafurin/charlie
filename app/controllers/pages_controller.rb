@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def message
     current_user.message = params["/settings"][:message]
     if current_user.save
-      redirect_to settings_path, notice: "Updated Message"
+      redirect_to settings_path, notice: "Message updated succesfully"
     else
       redirect_to settings_path, alert: "Message must be min. 10 characters"
     end
@@ -21,13 +21,11 @@ class PagesController < ApplicationController
     if current_user.voice == true
       current_user.voice = false
       current_user.save
-      # replace notice with button design (on/off)
-      redirect_to settings_path, notice: "Voice disabled"
+      redirect_to settings_path
     else
       current_user.voice = true
       current_user.save
-      # replace notice with button design (on/off)
-      redirect_to settings_path, notice: "Voice enabled"
+      redirect_to settings_path
     end
   end
 

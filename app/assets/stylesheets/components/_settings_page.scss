@@ -14,18 +14,18 @@
 #accordionMain {
   border: 1px solid rgba(250, 184, 253, 0.753);
   border-radius: 20px;
-  box-shadow: 0 0 82px rgba(255, 196, 196, 0.637);
+  box-shadow: 0 0 42px rgba(255, 196, 196, 0.637);
 }
 // Main accordion headers
 #headingOne {
-  background: linear-gradient(45deg, #f5dbdc 43%, #e2b3ebd7 100%);
+  background: white;;
   button {
   color: rgb(139, 28, 28);
   box-shadow: none;
   }
 }
 #headingTwo {
-  background: linear-gradient(45deg, #f5dbdc 43%, #e1acd1cb 100%);
+  background: white;
   button {
   color: rgb(139, 28, 28);
   box-shadow: none;
@@ -34,19 +34,19 @@
 
 // Contact accordion headers
 #heading1 {
-  background: transparent;
+  background: white;;
   button {
   color: rgb(139, 28, 28);
   }
 }
 #heading2 {
-  background: transparent;
+  background: white;
   button {
   color: rgb(139, 28, 28);
   }
 }
 #heading3 {
-  background: transparent;
+  background: white;
   button {
   color: rgb(139, 28, 28);
   }
@@ -69,22 +69,49 @@
   background: transparent;
   a {
   text-decoration: none;
-  opacity: 1;
   }
 }
 #togglefalse {
   background: transparent;
   a {
+    opacity: 0.4;
     text-decoration: none;
-    opacity: 0.2;
   }
 }
 #toggleswitchtrue {
-  border-top: 1px solid rgba(255, 255, 255, 0.192);
-  background: linear-gradient(45deg, #f5dbdc 43%, #e2a6c9c9 100%);
+  box-shadow: 0 0 42px rgba(255, 196, 196, 0.637);
+  background: white;
+  position: relative;
+  border: none;
+  margin-top: 50px;
+  border: 1px solid rgba(189, 123, 185, 0.473);
+  &:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid rgba(49, 45, 49, 0.767);
+    background-color: rgb(167, 255, 24);
+    top: 15px;
+  }
 }
 
 #toggleswitchfalse {
-  border-top: 1px solid rgba(255, 255, 255, 0.192);
-  background: linear-gradient(45deg, #f5dbdc 43%, #db98c7ab 100%);
+  background: rgba(255, 255, 255, 0.644);
+  position: relative;
+  border: none;
+  margin-top: 50px;
+  border: 1px solid rgba(189, 123, 185, 0.473);
+  &:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(230, 193, 255, 0.719);
+    top: 14px;
+  }
 }

@@ -50,8 +50,8 @@
         </div>
       </div>
     </div>
-    <div class="card card-header" id="toggleswitch<%= current_user.voice %>">
-      <button class="btn" id="toggle<%= current_user.voice %>"><%= link_to "Toggle Voice", toggle_path, method: :post %></button>
-    </div>
   </div>
+    <div class="card card-header" id="toggleswitch<%= current_user.voice %>">
+      <div id="toggle<%= current_user.voice %>"><%= link_to "Sound #{current_user.voice ? "on" : "off"}", toggle_path, method: :post %></div>
+    </div>
 </div>
