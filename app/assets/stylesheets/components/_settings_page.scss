@@ -1,4 +1,8 @@
-
+.setting-header {
+  font-family: $headers-font;
+  color: #3E455A;
+  text-align: center;
+}
 .settings {
   background: transparent;
   margin-top: 40px;
@@ -6,6 +10,9 @@
   .card {
     border-radius: 20px;
     font-size: 18px;
+    .card-body {
+      background: rgba(255, 248, 248, 0.932);
+    }
     a {
       color: rgb(139, 28, 28);
     }
@@ -14,41 +21,63 @@
 #accordionMain {
   border: 1px solid rgba(250, 184, 253, 0.753);
   border-radius: 20px;
-  box-shadow: 0 0 42px rgba(255, 196, 196, 0.637);
+  box-shadow: 0 0 42px rgba(255, 196, 196, 0.411);
+}
+#accordion2 {
+  border-radius: 20px;
+  box-shadow: 0 0 22px rgba(255, 205, 205, 0.795);
 }
 // Main accordion headers
 #headingOne {
-  background: white;;
+  background: rgb(253, 245, 245);
   button {
   color: rgb(139, 28, 28);
   box-shadow: none;
+  &:active {
+    color: rgb(248, 169, 132);
+  }
   }
 }
 #headingTwo {
-  background: white;
+  background: rgb(255, 248, 248);
   button {
   color: rgb(139, 28, 28);
   box-shadow: none;
+  &:active {
+    color: rgb(248, 169, 132);
+  }
   }
 }
 
 // Contact accordion headers
 #heading1 {
-  background: white;;
+  background: rgb(255, 251, 251);
   button {
   color: rgb(139, 28, 28);
+  box-shadow: none;
+  &:active {
+    color: rgb(248, 169, 132);
+  }
   }
 }
 #heading2 {
-  background: white;
+  background: rgb(255, 251, 251);
   button {
   color: rgb(139, 28, 28);
+  box-shadow: none;
+  &:active {
+    color: rgb(248, 169, 132);
+  }
   }
 }
 #heading3 {
-  background: white;
+  background: rgb(255, 251, 251);
   button {
   color: rgb(139, 28, 28);
+  box-shadow: none;
+  &:active {
+    color: rgb(248, 169, 132);
+  }
   }
 }
 
@@ -69,18 +98,24 @@
   background: transparent;
   a {
   text-decoration: none;
+  &:active {
+    color: rgb(248, 169, 132);
+  }
   }
 }
 #togglefalse {
   background: transparent;
   a {
-    opacity: 0.4;
+    opacity: 0.6;
     text-decoration: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #toggleswitchtrue {
   box-shadow: 0 0 42px rgba(255, 196, 196, 0.637);
-  background: white;
+  background: rgb(255, 250, 250);
   position: relative;
   border: none;
   margin-top: 50px;
@@ -93,13 +128,13 @@
     height: 20px;
     border-radius: 50%;
     border: 4px solid rgba(49, 45, 49, 0.767);
-    background-color: rgb(167, 255, 24);
+    background-color: rgb(252, 255, 98);
     top: 15px;
   }
 }
 
 #toggleswitchfalse {
-  background: rgba(255, 255, 255, 0.644);
+  background: rgb(255, 250, 250);
   position: relative;
   border: none;
   margin-top: 50px;
