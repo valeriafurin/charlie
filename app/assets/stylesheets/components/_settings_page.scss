@@ -1,0 +1,90 @@
+
+.settings {
+  background: transparent;
+  margin-top: 40px;
+  text-align: center;
+  .card {
+    border-radius: 20px;
+    font-size: 18px;
+    a {
+      color: rgb(139, 28, 28);
+    }
+  }
+}
+#accordionMain {
+  border: 1px solid rgba(250, 184, 253, 0.753);
+  border-radius: 20px;
+  box-shadow: 0 0 82px rgba(255, 196, 196, 0.637);
+}
+// Main accordion headers
+#headingOne {
+  background: linear-gradient(45deg, #f5dbdc 43%, #e2b3ebd7 100%);
+  button {
+  color: rgb(139, 28, 28);
+  box-shadow: none;
+  }
+}
+#headingTwo {
+  background: linear-gradient(45deg, #f5dbdc 43%, #e1acd1cb 100%);
+  button {
+  color: rgb(139, 28, 28);
+  box-shadow: none;
+  }
+}
+
+// Contact accordion headers
+#heading1 {
+  background: transparent;
+  button {
+  color: rgb(139, 28, 28);
+  }
+}
+#heading2 {
+  background: transparent;
+  button {
+  color: rgb(139, 28, 28);
+  }
+}
+#heading3 {
+  background: transparent;
+  button {
+  color: rgb(139, 28, 28);
+  }
+}
+
+// Background Accordion ?? -has to be fixed
+
+
+// Message save button
+#msg-save-btn {
+  background: transparent;
+  border-radius: 4px;
+  box-shadow: rgba(243, 216, 216, 0.911);
+  border: 1px solid rgba(243, 216, 216, 0.788);
+  padding: 3px 8px 3px 8px;
+}
+
+// Toggle Sound button (changing appearance on current_user.voice = true/false)
+#toggletrue {
+  background: transparent;
+  a {
+  text-decoration: none;
+  opacity: 1;
+  }
+}
+#togglefalse {
+  background: transparent;
+  a {
+    text-decoration: none;
+    opacity: 0.2;
+  }
+}
+#toggleswitchtrue {
+  border-top: 1px solid rgba(255, 255, 255, 0.192);
+  background: linear-gradient(45deg, #f5dbdc 43%, #e2a6c9c9 100%);
+}
+
+#toggleswitchfalse {
+  border-top: 1px solid rgba(255, 255, 255, 0.192);
+  background: linear-gradient(45deg, #f5dbdc 43%, #db98c7ab 100%);
+}

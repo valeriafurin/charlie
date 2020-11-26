@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_11_24_092106) do
   enable_extension "plpgsql"
 
   create_table "contacts", force: :cascade do |t|
-    t.string "phone_number"
-    t.string "name"
+    t.string "phone_number", default: ""
+    t.string "name", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_092106) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "message", default: "I'm having a panic attack. Please call me."
     t.string "phone_number"
-    t.boolean "voice"
+    t.boolean "voice", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
