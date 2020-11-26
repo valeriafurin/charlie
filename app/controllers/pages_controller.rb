@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     if current_user.save
       redirect_to settings_path, notice: "Updated Message"
     else
-      redirect_to settings_path, notice: "Something went wrong"
+      redirect_to settings_path, alert: "Message must be min. 10 characters"
     end
   end
 
