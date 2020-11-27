@@ -1,0 +1,6 @@
+<div class="title"><h1 class="text-center">GET HELP</h1></div>
+  <% iter = 1 %>
+    <% @contacts.each do |contact| %>
+        <div id="choice<%= iter %>"><%= contact.name %></div>
+      <% iter += 1 %>
+    <% end %>

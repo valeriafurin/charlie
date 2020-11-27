@@ -1,4 +1,4 @@
 <%= simple_form_for message_path, method: :patch do |f| %>
-  <%= f.input :message, placeholder: "#{current_user.message}" %>
+  <%= f.input "Edit", as: :text, placeholder: "#{current_user.message}" %>
   <%= f.submit "Save", id: "msg-save-btn" %>
 <% end %>
