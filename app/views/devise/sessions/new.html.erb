@@ -11,9 +11,10 @@
                                input_html: { class: "charlies-input", autocomplete: "current-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Log in", class: "charlies-btn" %>
+      <div class="text-center">
+        <%# <div class="form-actions-charlies"> %>
+          <%= f.button :submit, "Log in", class: "charlies-btn" %>
+        <%# </div> %>
       </div>
     <% end %>
 

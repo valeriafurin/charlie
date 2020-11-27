@@ -22,11 +22,11 @@
 }
 
 .charlies-btn {
-    position: absolute;
     width: fit-content;
     height: auto;
-    left: 100px;
-    top: 443px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    padding: 6px 16px;
     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%);
     border-radius: 40px;
 
@@ -47,4 +47,5 @@
     text-decoration: none;
     color: #FE786C;
     font-size: 15px;
+    margin-left: 20px;
 }
