@@ -4,6 +4,11 @@ class PagesController < ApplicationController
   def home
   end
 
+  def send_message
+    redirect_to root_path, notice: "Message sent. Keep breathing."
+  end
+
+
   def message
     current_user.message = params["/settings"][:message]
     if current_user.save

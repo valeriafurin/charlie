@@ -1,6 +1,8 @@
 <div class="title"><h1 class="text-center">GET HELP</h1></div>
   <% iter = 1 %>
     <% @contacts.each do |contact| %>
-        <div id="choice<%= iter %>"><%= contact.name %></div>
+      <div class="card card-header"id="choice<%= iter %>"><%= contact.name == "" ? "Empty contact" : contact.name %></div>
       <% iter += 1 %>
     <% end %>
+
+<%= link_to "Get Help", send_path, method: :post, class: "charlies-btn mt-5 p-2 text-center" %>
