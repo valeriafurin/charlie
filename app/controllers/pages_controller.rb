@@ -29,5 +29,8 @@ class PagesController < ApplicationController
     end
   end
 
+  def get_help
+    @contacts = Contact.where(user_id: current_user.id)
+  end
 
 end
