@@ -112,6 +112,10 @@
   box-shadow: 0px 4px 19px 6px rgba(254, 120, 108, 0.23);
 }
 
+.hidden {
+  opacity: 0;
+}
+
 // css class="hidden" default opacity = 0
 // js nach 10 sekunden (counter method) remove class button.classList.remove
 // js setInterval
