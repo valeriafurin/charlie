@@ -23,6 +23,7 @@
     border-radius: 50%;
     background-color: rgba(230, 193, 255, 0.719);
     top: 14px;
+    
   }
 }
 
@@ -101,8 +102,9 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 4px solid rgba(49, 45, 49, 0.767);
-    background-color: rgb(240, 255, 109) !important;
+    border: 3.5px solid rgb(246, 117, 105) !important;
+    box-shadow: 0 0 42px rgba(255, 196, 196, 1);
+    background-color: none !important;
     top: 15px;
   }
 }
