@@ -1,2 +1,4 @@
-const getHelp = document.querySelectorAll(".hidden");
-let count = 0;
+const showBtn = () => {
+  document.getElementById(getHelp).classList.remove("hidden");
+};
+window.setTimeout(showBtn, 5000);

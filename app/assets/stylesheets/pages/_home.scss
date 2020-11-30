@@ -113,9 +113,5 @@
 }
 
 .hidden {
-  opacity: 0;
+  display: none;
 }
-
-// css class="hidden" default opacity = 0
-// js nach 10 sekunden (counter method) remove class button.classList.remove
-// js setInterval
