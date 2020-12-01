@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
     # check private methods for new_session & timestamp_unique?
@@ -12,9 +12,10 @@ class PagesController < ApplicationController
   end
 
   def send_message
+    message = "TEST"
+    TwilioTextMessenger.new(message).call
     redirect_to root_path, notice: "Message sent. Keep breathing."
   end
-
 
   def message
     current_user.message = params["/settings"][:message]
@@ -56,7 +57,7 @@ class PagesController < ApplicationController
     time_data = new_sess.time
     # if its not the first session
     if @sessions[0] != nil
-    # check if the new entry will not be a duplicate (excluding) of the last
+      # check if the new entry will not be a duplicate (excluding) of the last
       latest = sessions[-1].time
       latest.hour != time_data.hour && latest.day != time_data.day && latest.month != time_data.month && latest.year != time_data.year
     else
