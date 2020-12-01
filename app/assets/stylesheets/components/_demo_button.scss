@@ -1,0 +1,62 @@
+.bg-pulse {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background: white;
+  border: solid 1px rgb(255, 99, 86);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+href {
+  position: absolute;
+  color: rgb(255, 99, 86);
+  font-size: 12px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 34px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.bg-pulse::before,
+.bg-pulse::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 50%;
+  border: 1px solid rgb(255, 99, 86);
+  background-color: rgba(255, 99, 86, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
+  border-radius: 50%;
+  animation: pulse 5s linear infinite;
+  z-index: 27;
+}
+
+.bg-pulse::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
