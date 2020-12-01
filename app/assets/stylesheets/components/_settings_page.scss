@@ -1,8 +1,8 @@
 .title {
   h1 {
-    color: rgb(139, 28, 28);
+    color: #ff6356;
     font-family: $h1-font;
-    font-size: 36px;
+    font-size: 20px;
     text-align: center;
   }
 }
@@ -17,7 +17,7 @@
       background: rgba(255, 248, 248, 0.932);
     }
     a {
-      color: rgb(139, 28, 28);
+      color: #ff6356;
     }
   }
 }
@@ -35,20 +35,20 @@
   background: rgb(253, 245, 245);
   box-shadow: none;
   button {
-  color: rgb(139, 28, 28);
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #headingTwo {
   background: rgb(255, 248, 248);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 
@@ -56,36 +56,35 @@
 #heading1 {
   background: rgb(255, 251, 251);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #heading2 {
   background: rgb(255, 251, 251);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #heading3 {
   background: rgb(255, 251, 251);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 
 // Background Accordion ?? -has to be fixed
-
 
 // Message save button
 #msg-save-btn {
@@ -100,10 +99,10 @@
 #toggletrue {
   background: transparent;
   a {
-  text-decoration: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    text-decoration: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #togglefalse {
