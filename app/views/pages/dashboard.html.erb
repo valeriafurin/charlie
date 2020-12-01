@@ -2,12 +2,8 @@
   <h1 class="text-center">DASHBOARD</h1>
 </div>
 
+<%= bar_chart(a: 1, b:2, c:3) %>
+<%#= scatter_chart @sessions(:time) %>
 
-<%= @sessions.class %>
-
-<%= bar_chart() %>
-
-
-<%= link_to "Back", root_path %>
 <%= link_to "Settings", settings_path %>
 <%= link_to "Logout", destroy_user_session_path, method: :delete %>

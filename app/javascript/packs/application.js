@@ -10,7 +10,8 @@ require("@rails/activestorage").start()
 require("channels")
 require("chartkick")
 require("chart.js")
-
+//= require chartkick
+//= require Chart.bundle
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -28,13 +29,16 @@ require("chart.js")
 // External imports
 import "bootstrap";
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 // import { toggleActive } from "../scripts/get_help";
 import { setShowBtn } from "../scripts/btn-hidden";
+import { addActive } from "../scripts/get_help";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
   setShowBtn();
+  addActive();
 });
