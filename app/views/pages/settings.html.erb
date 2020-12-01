@@ -54,4 +54,5 @@
     <div class="card card-header" id="toggleswitch<%= current_user.voice %>">
       <div id="toggle<%= current_user.voice %>"><%= link_to "Sound #{current_user.voice ? "on" : "off"}", toggle_path, method: :post %></div>
     </div>
+  <%= link_to "Back", dashboard_path %>
 </div>

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   patch '/settings', to: 'pages#message', as: :message
   get '/get_help', to: 'pages#get_help', as: :get_help
   post '/get_help', to: 'pages#send_message', as: :send
+  get '/dashboard', to: 'pages#dashboard'
   resources :contacts, only: [:edit, :update]
 end
