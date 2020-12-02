@@ -26,7 +26,7 @@
                       <%= simple_form_for contact do |f| %>
                         <%= f.input :name, placeholder: "Enter a name" %>
                         <%= f.input :phone_number, placeholder: "Enter a phone number" %>
-                        <%= f.button :submit %>
+                        <%= f.button :submit, class:"beautiful-btn" %>
                       <% end %>
                     </div>
                   </div>
@@ -54,5 +54,5 @@
     <div class="card card-header" id="toggleswitch<%= current_user.voice %>">
       <div id="toggle<%= current_user.voice %>"><%= link_to "Sound #{current_user.voice ? "on" : "off"}", toggle_path, method: :post %></div>
     </div>
-  <%= link_to "Back", dashboard_path %>
+  <div class="mini-btn"><%= link_to "Back", dashboard_path %></div>
 </div>

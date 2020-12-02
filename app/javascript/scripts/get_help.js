@@ -1,3 +1,4 @@
+
 const addActive = () => {
 
 const cards = document.querySelectorAll('.card')

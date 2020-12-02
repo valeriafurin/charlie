@@ -1,6 +1,5 @@
 // CHOICE ONE
 
-
 #choice1 {
   background: rgba(255, 255, 255, 0.644);
   position: relative;
@@ -23,7 +22,6 @@
     border-radius: 50%;
     background-color: rgba(230, 193, 255, 0.719);
     top: 14px;
-    
   }
 }
 
@@ -81,7 +79,6 @@
   }
 }
 
-
 .active {
   box-shadow: 0 0 42px rgba(255, 196, 196, 0.788);
   background: white;
@@ -93,7 +90,7 @@
   font-size: 18px;
   border: 1px solid rgba(189, 123, 185, 0.473);
   a {
-  text-decoration: none;
+    text-decoration: none;
   }
   &:after {
     content: "";

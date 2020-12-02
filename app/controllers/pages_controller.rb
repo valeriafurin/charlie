@@ -1,6 +1,7 @@
 require 'json'
 
 class PagesController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [ :home ]
   before_action :set_sessions, only: [:home, :dashboard]
   before_action :set_contacts, only: [:settings, :get_help]
@@ -20,7 +21,10 @@ class PagesController < ApplicationController
   def dashboard
   end
 
+  # Message sent from Twilio to Valerias number
   def send_message
+    message = "I'm having a panic attack. Please write me."
+    TwilioTextMessenger.new(message).call
     redirect_to root_path, notice: "Message sent. Keep breathing."
   end
 
@@ -55,6 +59,7 @@ class PagesController < ApplicationController
     @sessions = Session.where(user_id: current_user.id) if current_user
   end
 
+
   def save_session
     #store new session in variable
     new_sess = Session.new(user_id: current_user.id, time: Time.now)
@@ -62,8 +67,8 @@ class PagesController < ApplicationController
     new_sess.save! if @sessions.empty?
     #else if the last session recorded is 5 or more mins ago, create a new session
     new_sess.save! if (new_sess.time - @sessions.last.created_at) > 300
-  end
 
+  end
 end
 
 #  ----for later fixing (functionality for dashboard graph)

@@ -11,6 +11,7 @@
 
 .mobile-title {
   margin: 0;
+  margin-top: 25px;
   color: rgb(255, 99, 86);
   text-align: center;
 }
@@ -18,7 +19,7 @@
 .animation {
   position: relative;
   display: flex;
-  margin: 160px auto 0;
+  margin: 140px auto 0;
   background: rgb(255, 99, 86);
   background: linear-gradient(
     319deg,
@@ -81,17 +82,18 @@
 
 .charlies-btn-homepage {
   position: relative;
-  bottom: -90px;
+  bottom: -100px;
 
   margin: 0 auto;
   z-index: 17;
   width: fit-content;
   height: auto;
-  padding: 6px 16px;
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%, #ffffff 100%);
+  padding: 15px 25px;
+  background: #ffffff;
   border-radius: 40px;
+  text-decoration: none;
 
-  font-family: Comfortaa;
+  font-family: $body-font;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
@@ -109,7 +111,7 @@
     text-decoration: none;
   }
 
-  box-shadow: 0px 4px 19px 6px rgba(254, 120, 108, 0.23);
+  box-shadow: 0px 4px 19px 6px #fe786c3b;
 }
 
 // Class for hiding the button until the JS code in btn-hidden.js reveals it

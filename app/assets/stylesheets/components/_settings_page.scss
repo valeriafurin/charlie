@@ -1,8 +1,8 @@
 .title {
   h1 {
-    color: rgb(139, 28, 28);
+    color: #ff6356;
     font-family: $h1-font;
-    font-size: 36px;
+    font-size: 20px;
     text-align: center;
   }
 }
@@ -17,10 +17,11 @@
       background: rgba(255, 248, 248, 0.932);
     }
     a {
-      color: rgb(139, 28, 28);
+      color: #ff6356;
     }
   }
 }
+
 #accordionMain {
   border: 1px solid rgba(250, 184, 253, 0.753);
   border-radius: 20px;
@@ -35,75 +36,82 @@
   background: rgb(253, 245, 245);
   box-shadow: none;
   button {
-  color: rgb(139, 28, 28);
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #headingTwo {
   background: rgb(255, 248, 248);
   button {
-  color: rgb(139, 28, 28);
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
+  }
+}
+
+.btn:focus {
   box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
-  }
 }
 
 // Contact accordion headers
 #heading1 {
   background: rgb(255, 251, 251);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #heading2 {
   background: rgb(255, 251, 251);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #heading3 {
   background: rgb(255, 251, 251);
   button {
-  color: rgb(139, 28, 28);
-  box-shadow: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    color: #ff6356;
+    box-shadow: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 
 // Background Accordion ?? -has to be fixed
 
-
+#collapseTwo {
+  color: #3e455a;
+}
 // Message save button
 #msg-save-btn {
   background: transparent;
   border-radius: 4px;
-  box-shadow: rgba(243, 216, 216, 0.911);
+  box-shadow: 0px 4px 19px 6px #fe786c3b;
   border: 1px solid rgba(243, 216, 216, 0.788);
   padding: 3px 8px 3px 8px;
+  color: #3e455a;
 }
 
 // Toggle Sound button (changing appearance on current_user.voice = true/false)
 #toggletrue {
   background: transparent;
   a {
-  text-decoration: none;
-  &:active {
-    color: rgb(248, 169, 132);
-  }
+    text-decoration: none;
+    &:active {
+      color: rgb(248, 169, 132);
+    }
   }
 }
 #togglefalse {
@@ -121,7 +129,7 @@
   background: rgb(255, 250, 250);
   position: relative;
   border: none;
-  margin-top: 50px;
+  margin-top: 30px;
   border: 1px solid rgba(189, 123, 185, 0.473);
   &:after {
     content: "";
