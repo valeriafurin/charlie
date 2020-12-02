@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   # Message sent from Twilio to Valerias number
   def send_message
-    message = "TEST"
+    message = "I'm having a panic attack. Please write me."
     TwilioTextMessenger.new(message).call
     redirect_to root_path, notice: "Message sent. Keep breathing."
   end
