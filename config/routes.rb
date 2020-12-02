@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   post '/get_help', to: 'pages#send_message', as: :send
   get '/dashboard', to: 'pages#dashboard'
   resources :contacts, only: [:edit, :update]
+  # Error pages routes
+  get '/404', to: "errors#not_found"
+  get '/422', to: "errors#unacceptable"
+  get '/500', to: "errors#internal_error"
 end
