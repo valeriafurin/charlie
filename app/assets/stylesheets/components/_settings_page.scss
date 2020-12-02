@@ -53,6 +53,9 @@
   }
 }
 
+.btn {
+}
+
 // Contact accordion headers
 #heading1 {
   background: rgb(255, 251, 251);
@@ -87,13 +90,17 @@
 
 // Background Accordion ?? -has to be fixed
 
+#collapseTwo {
+  color: #3e455a;
+}
 // Message save button
 #msg-save-btn {
   background: transparent;
   border-radius: 4px;
-  box-shadow: rgba(243, 216, 216, 0.911);
+  box-shadow: 0px 4px 19px 6px #fe786c3b;
   border: 1px solid rgba(243, 216, 216, 0.788);
   padding: 3px 8px 3px 8px;
+  color: #3e455a;
 }
 
 // Toggle Sound button (changing appearance on current_user.voice = true/false)
