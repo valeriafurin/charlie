@@ -1,7 +1,10 @@
+require 'json'
+
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
   before_action :set_sessions, only: [:home, :dashboard]
   before_action :set_contacts, only: [:settings, :get_help]
+  
 
   def home
     #if user is logged in, save the session
@@ -49,15 +52,33 @@ class PagesController < ApplicationController
   end
 
   def set_sessions
-    @sessions = Session.where(user_id: current_user.id)
+    @sessions = Session.where(user_id: current_user.id) if current_user
   end
 
   def save_session
     #store new session in variable
     new_sess = Session.new(user_id: current_user.id, time: Time.now)
     #if its the first session create session
-    new_sess.save if @sessions.empty?
+    new_sess.save! if @sessions.empty?
     #else if the last session recorded is 5 or more mins ago, create a new session
-    new_sess.save if (new_sess.time - @sessions.last.time) > 300
+    new_sess.save! if (new_sess.time - @sessions.last.created_at) > 300
   end
+
 end
+
+#  ----for later fixing (functionality for dashboard graph)
+
+#    @data = {}
+#    @sessions.each do |session|
+#      x = Time.new(session.created_at.year, month_with_zero(session.created_at.month), day_with_zero(session.created_at.day)).asctime[0..9]
+#      @data[x] = session.created_at.hour
+#    end
+#    {"monday 01.02.12" => {10:13, 11:30, ..., }, "tuesday 02.02.12" => {15:12, ...}}
+
+#  def month_with_zero(month)
+#    month.to_s.length == 1 ? "0#{month}".to_i : month
+#  end
+
+#  def day_with_zero(day)
+#    day.to_s.length == 1 ? "0#{day}".to_i : day
+#  end
