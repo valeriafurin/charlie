@@ -20,8 +20,8 @@ module Charlie
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-  end
 
-  # Error pages step 1
-  config.exceptions_app = self.routes
+    # Error pages step 1
+    config.exceptions_app = self.routes
+  end
 end
