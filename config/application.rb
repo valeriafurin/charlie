@@ -21,4 +21,7 @@ module Charlie
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+
+  # Error pages step 1
+  config.exceptions_app = self.routes
 end
