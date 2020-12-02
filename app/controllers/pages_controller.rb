@@ -1,14 +1,24 @@
+require 'json'
+
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+
+  skip_before_action :authenticate_user!, only: [ :home ]
+  before_action :set_sessions, only: [:home, :dashboard]
+  before_action :set_contacts, only: [:settings, :get_help]
+  
 
   def home
-    # check private methods for new_session & timestamp_unique?
-    # if current user is logged in, create a new session
-    if current_user
-      sess = new_session
-      @sessions = Session.where(user_id: current_user.id)
-      sess.save! if timestamp_unique?(sess, @sessions)
-    end
+    #if user is logged in, save the session
+    save_session if current_user
+  end
+
+  def settings
+  end
+
+  def get_help
+  end
+
+  def dashboard
   end
 
   # Message sent from Twilio to Valerias number
@@ -27,10 +37,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def settings
-    @contacts = Contact.where(user_id: current_user.id)
-  end
-
   def toggle_voice
     if current_user.voice == true
       current_user.voice = false
@@ -43,34 +49,41 @@ class PagesController < ApplicationController
     end
   end
 
-  def get_help
+  private
+
+  def set_contacts
     @contacts = Contact.where(user_id: current_user.id)
   end
 
-  def dashboard
-    @sessions = Session.group(user_id: current_user.id)
+  def set_sessions
+    @sessions = Session.where(user_id: current_user.id) if current_user
   end
 
-  private
 
-  def timestamp_unique?(new_sess, sessions)
-    # access the timetamp of the new session
-    time_data = new_sess.time
-    # if its not the first session
-    if @sessions[0] != nil
-      # check if the new entry will not be a duplicate (excluding) of the last
-      latest = sessions[-1].time
-      latest.hour != time_data.hour && latest.day != time_data.day && latest.month != time_data.month && latest.year != time_data.year
-    else
-      # else if its the first session entry return:
-      true
-    end
-  end
+  def save_session
+    #store new session in variable
+    new_sess = Session.new(user_id: current_user.id, time: Time.now)
+    #if its the first session create session
+    new_sess.save! if @sessions.empty?
+    #else if the last session recorded is 5 or more mins ago, create a new session
+    new_sess.save! if (new_sess.time - @sessions.last.created_at) > 300
 
-  def new_session
-    a = Session.new
-    a.time = Time.now
-    a.user_id = current_user.id
-    return a
   end
 end
+
+#  ----for later fixing (functionality for dashboard graph)
+
+#    @data = {}
+#    @sessions.each do |session|
+#      x = Time.new(session.created_at.year, month_with_zero(session.created_at.month), day_with_zero(session.created_at.day)).asctime[0..9]
+#      @data[x] = session.created_at.hour
+#    end
+#    {"monday 01.02.12" => {10:13, 11:30, ..., }, "tuesday 02.02.12" => {15:12, ...}}
+
+#  def month_with_zero(month)
+#    month.to_s.length == 1 ? "0#{month}".to_i : month
+#  end
+
+#  def day_with_zero(day)
+#    day.to_s.length == 1 ? "0#{day}".to_i : day
+#  end
