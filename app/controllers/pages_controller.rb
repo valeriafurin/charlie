@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     end
   end
 
+  # Message sent from Twilio to Valerias number
   def send_message
     message = "TEST"
     TwilioTextMessenger.new(message).call
