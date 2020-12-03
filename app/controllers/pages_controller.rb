@@ -61,29 +61,12 @@ class PagesController < ApplicationController
 
 
   def save_session
-    #store new session in variable
-    new_sess = Session.new(user_id: current_user.id, time: Time.now)
-    #if its the first session create session
-    new_sess.save! if @sessions.empty?
-    #else if the last session recorded is 5 or more mins ago, create a new session
-    new_sess.save! if (@sessions.last.created_at - new_sess.time) > 300
-
+    #if its the first session or the last recorded sessions is
+    #longer than 5 minutes ago, save a new session
+    minduration = (Time.now - @sessions.last.created_at) > 300
+    if @sessions.empty? || minduration
+      new_sess = Session.new(user_id: current_user.id, time: Time.now)
+      new_sess.save
+    end
   end
 end
-
-#  ----for later fixing (functionality for dashboard graph)
-
-#    @data = {}
-#    @sessions.each do |session|
-#      x = Time.new(session.created_at.year, month_with_zero(session.created_at.month), day_with_zero(session.created_at.day)).asctime[0..9]
-#      @data[x] = session.created_at.hour
-#    end
-#    {"monday 01.02.12" => {10:13, 11:30, ..., }, "tuesday 02.02.12" => {15:12, ...}}
-
-#  def month_with_zero(month)
-#    month.to_s.length == 1 ? "0#{month}".to_i : month
-#  end
-
-#  def day_with_zero(day)
-#    day.to_s.length == 1 ? "0#{day}".to_i : day
-#  end
