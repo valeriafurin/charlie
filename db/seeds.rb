@@ -30,7 +30,7 @@ puts "creating sessions"
   a = Session.new(user_id: user.id)
   a.save!
   puts "----------------new session"
-  a.created_at = Faker::Time.between(from: DateTime.new(2020,11,28,4,5,6,'+01:00'), to: DateTime.new(2020,12,4,4,5,6,'+01:00'))
+  a.created_at = Faker::Time.between(from: DateTime.new(2020,11,28,4,5,6,'+01:00'), to: DateTime.new(2020,12,3,4,5,6,'+01:00'))
   a.save
   puts a.created_at
 end

@@ -56,7 +56,7 @@ class PagesController < ApplicationController
   end
 
   def set_sessions
-    @sessions = Session.where(user_id: current_user.id) if current_user
+    @sessions = Session.where(user_id: current_user.id).sort_by &:created_at if current_user
   end
 
 
@@ -66,7 +66,7 @@ class PagesController < ApplicationController
     #if its the first session create session
     new_sess.save! if @sessions.empty?
     #else if the last session recorded is 5 or more mins ago, create a new session
-    new_sess.save! if (new_sess.time - @sessions.last.created_at) > 300
+    new_sess.save! if (@sessions.last.created_at - new_sess.time) > 300
 
   end
 end
