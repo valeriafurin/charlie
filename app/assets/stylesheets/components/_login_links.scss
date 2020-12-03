@@ -1,8 +1,11 @@
 .form-login {
   .login-link {
     margin-left: 0px;
-    #sign-up {
-      padding-top: 100px;
-    }
+    text-decoration: none !important;
+    color: #fe786c !important;
   }
+}
+
+.top-space {
+  margin-top: 20px;
 }
