@@ -1,5 +1,5 @@
 <div class="title">
-  <h1 class="text-center">DASHBOARD</h1>
+  <h1 class="text-center">When do you need Charlie the most?</h1>
 </div>
 <div id="diagram">
   <%= column_chart Session.group_by_day_of_week(:created_at, format: "%a").count %>
@@ -9,4 +9,9 @@
 <%= link_to "Settings", settings_path, id:"settings-btn" %>
 <br>
 <%= link_to "Logout", destroy_user_session_path, method: :delete,  id:"logout-btn" %>
+
+<div class="btn-top">
+  <%= link_to "Settings", settings_path, class:"mini-btn01" %>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete,  class:"mini-btn01" %>
+</div>
 
