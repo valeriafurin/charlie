@@ -1,6 +1,13 @@
-.charlies-btn {
+#diagram {
+  // box-shadow: 0 0 42px rgba(253, 209, 209, 0.904);
+  // // border: 3px solid rgb(255, 233, 233);
+  // border-radius: 12px;
+  // margin-top: 32px;
+}
+
+#settings-btn {
   position: relative;
-  bottom: -30px !important ;
+  bottom: -48px;
 
   margin: 0 auto;
   z-index: 17;
@@ -25,12 +32,18 @@
     text-decoration: none;
   }
   &:active {
-    color: #f8a984;
+    color: rgb(248, 169, 132);
     text-decoration: none;
   }
+
+  box-shadow: 0px 4px 19px 6px #fe786c3b;
 }
 
-.charlies-btn:hover {
+#logout-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 30px;
+  margin: 10px;
+  color: #3e455a !important;
   text-decoration: none !important;
-  color: #fe786c !important;
 }
