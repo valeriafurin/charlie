@@ -1,10 +1,10 @@
 <div class="title">
-  <h1 class="textCenter">Reach out for help:</h1>
+  <h1 class="text-center">Reach out for help:</h1>
 </div>
-<div id="getHelpOptions">
+<div id="get-help-options">
   <% iter = 1 %>
     <% @contacts.each do |contact| %>
-      <div class="card cardHeader" id="choice<%= iter %>"><%= contact.name == "" ? "Empty contact" : contact.name %></div>
+      <div class="card card-header" id="choice<%= iter %>"><%= contact.name == "" ? "Empty contact" : contact.name %></div>
       <% iter += 1 %>
     <% end %>
 </div>

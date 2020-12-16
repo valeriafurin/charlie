@@ -2,7 +2,7 @@
 <div class="container settings">
   <div class="accordion" id="accordionMain">
     <div class="card">
-      <div class="cardHeader" id="headingOne">
+      <div class="card-header" id="headingOne">
         <h5 class="mb-0">
           <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
             Contacts
@@ -10,11 +10,11 @@
         </h5>
       </div>
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMain">
-        <div class="cardBody">
+        <div class="card-body">
             <div class="accordion" id="accordion2">
               <% @contacts.each do |contact| %>
                 <div class="card">
-                  <div class="cardHeader" id="heading<%= contact.id %>">
+                  <div class="card-header" id="heading<%= contact.id %>">
                     <h5 class="mb-0">
                       <button class="btn" type="button" data-toggle="collapse" data-target="#collapse<%= contact.id %>" aria-expanded="false" aria-controls="collapse<%= contact.id %>">
                         <%= contact.name == "" ? "Empty" : contact.name %>
@@ -26,7 +26,7 @@
                       <%= simple_form_for contact do |f| %>
                         <%= f.input :name, placeholder: "Enter a name" %>
                         <%= f.input :phone_number, placeholder: "Enter a phone number" %>
-                        <%= f.button :submit, class:"beautifulBtn" %>
+                        <%= f.button :submit, class:"beautiful-btn" %>
                       <% end %>
                     </div>
                   </div>
@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="cardHeader" id="headingTwo">
+      <div class="card-header" id="headingTwo">
         <h5 class="mb-0">
           <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Message
@@ -45,14 +45,14 @@
         </h5>
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionMain">
-        <div class="cardBody">
+        <div class="card-body">
           <%= render "shared/message", resource: current_user %>
         </div>
       </div>
     </div>
   </div>
-    <div class="card cardHeader" id="toggleswitch<%= current_user.voice %>">
+    <div class="card card-header" id="toggleswitch<%= current_user.voice %>">
       <div id="toggle<%= current_user.voice %>"><%= link_to "Sound #{current_user.voice ? "on" : "off"}", toggle_path, method: :post %></div>
     </div>
-  <div class="miniBtn"><%= link_to "Back", dashboard_path %></div>
+  <div class="mini-btn"><%= link_to "Back", dashboard_path %></div>
 </div>
