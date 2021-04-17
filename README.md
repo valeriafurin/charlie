@@ -12,7 +12,7 @@ The app was built as a final project during the coding bootcamp of Le Wagon Berl
 
 ## Acknowledegment
 
-The wonderful team that made this happen consist of Lea Schuhmacher (@craftedcodes), Marius Möller (@nocarea) and myself, Valeria Furin (@valeriafurin)
+The wonderful team that made this happen consist of Lea Schumacher (@craftedcodes), Marius Möller (@nocarea) and myself, Valeria Furin (@valeriafurin)
 
 
 ## Extra info
